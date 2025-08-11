@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector de Galerías</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #5B5B5B;
+            transition: opacity 1s ease;
+        }
+
+        .fade-out {
+            opacity: 0;
+        }
+
+        .gallery-button {
+            cursor: pointer;
+            display: inline-block;
+            border: none;
+            background: none;
+        }
+
+        img {
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido al menú de las ediciones de la revista FORTVISION</h1>
+
+    <!-- Imagen que lleva a la Galería 1 con crossfade -->
+    <button class="gallery-button" onclick="goToGallery('edicion1.html')">
+        <img src="fortvisionedición1-imágenes-0.jpg" alt="Galería 1" width="300">
+    </button>
+
+    <!-- Enlace normal para la Galería 2 -->
+    <p><a href="edicion2.html"<h1>Edicion de Septiembre 👀?</h1>
+
+    <script>
+        function goToGallery(url) {
+            document.body.classList.add("fade-out");
+            setTimeout(function() {
+                window.location.href = url;
+            }, 1000); // Espera 1 segundo para el efecto
+        }
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Próximamente</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 4em;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background-color: #000000;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Próximamente</h1>
+    
+    <!-- Botón para iniciar música -->
+    <button onclick="playMusic()"> 👀</button>
+
+    <!-- Música de fondo -->
+    <audio id="bg-music" loop>
+        <source src="yeat.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+
+    <script>
+        function playMusic() {
+            let music = document.getElementById("bg-music");
+            music.play();
+        }
+    </script>
+</body>
+</html>
